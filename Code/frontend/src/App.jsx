@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 import send_svg from './assets/send.svg';
 import mic_svg from './assets/mic.svg';
 import speaker_svg from './assets/speaker.svg';
-import file_svg from './assets/file.svg'; 
+import file_svg from './assets/File.svg'; 
 import backgroundPhoto from './assets/bg.jpeg';
 import gif from './assets/farm.gif';
 import { TransformedItems } from './dropdown';
