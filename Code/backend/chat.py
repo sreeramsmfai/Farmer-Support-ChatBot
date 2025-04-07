@@ -12,6 +12,10 @@ from keras.models import load_model
 from googletrans import Translator  # Import Translator from googletrans module
 from flask import Flask
 from flask_socketio import SocketIO, emit
+import eventlet
+eventlet.monkey_patch()
+
+from flask import Flask
 
 lemma = WordNetLemmatizer()
 model = load_model('model.h5')
@@ -85,8 +89,8 @@ def handle_message(data):
     emit('recv_message', response)
 
 # Running the app
-if __name__ == "__main__":
-    socketio.run(app, debug=True)
+#if __name__ == "__main__":
+#    socketio.run(app, debug=True)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))  # Render sets PORT automatically

@@ -11,7 +11,7 @@ import { TransformedItems } from './dropdown';
 import { io } from 'socket.io-client';
 
 // Establishing a connection to the server using Socket.IO
-const socket = io('http://127.0.0.1:5000');
+const socket = io('https://farmer-support-chatbot-1.onrender.com/');
 
 const App = () => {
   const [text, setText] = useState('');
