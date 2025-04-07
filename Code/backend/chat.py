@@ -1,6 +1,7 @@
 """ This file contains the code for the chatbot response. """
 
 # Importing the required libraries and model
+import os
 import nltk
 import pickle
 import numpy as np
@@ -86,3 +87,7 @@ def handle_message(data):
 # Running the app
 if __name__ == "__main__":
     socketio.run(app, debug=True)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Render sets PORT automatically
+    app.run(host="0.0.0.0", port=port)
